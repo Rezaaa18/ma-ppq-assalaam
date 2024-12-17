@@ -1,0 +1,74 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.gallery-tabs button {
+    text-decoration: none;
+    color: black;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.2s;
+    border-radius: 10px 10px 0 0;
+}
+
+.gallery-tabs button:hover {
+    color: #007bff;
+}
+
+.gallery-tabs button.active {
+    color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(0.95);
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.image-container img { /* Hanya terapkan gaya pada gambar di dalam kontainer ini */
+    height: 300px;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 15px; /* Sudut bulat pada gambar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Efek transisi yang halus */
+}
+
+.image-container img:hover { /* Hanya gambar dalam kontainer yang mendapatkan efek hover */
+    transform: scale(1.05); /* Memperbesar gambar saat hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Bayangan saat hover */
+    filter: brightness(1.1); /* Sedikit mencerahkan gambar saat hover */
+}
+
+.text-center {
+    margin: 20px 0;
+}
+
+/* Tampilkan gambar yang sesuai dengan album aktif */
+a.active[data-album="Lapang"]~.image-container img[data-album="Lapang"],
+a.active[data-album="Gedung"]~.image-container img[data-album="Gedung"],
+a.active[data-album="Kelas"]~.image-container img[data-album="Kelas"],
+a.active[data-album="Masjid"]~.image-container img[data-album="Masjid"] {
+    display: block; /* Tampilkan gambar saat tab aktif */
+    opacity: 0;
+    animation: fadeIn 0.5s forwards; /* Animasi fade-in */
+}

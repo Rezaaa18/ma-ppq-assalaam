@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f7f9fc; /* Latar belakang lembut untuk kontras */
+    font-family: Arial, sans-serif; /* Font umum untuk seluruh halaman */
+}
+
+.api-container {
+    position: relative;
+    width: 100%;
+    max-width: 1140px; /* Lebar maksimum kontainer */
+    margin: auto; /* Pusatkan kontainer */
+    border-radius: 15px; /* Sudut melingkar */
+    overflow: hidden; /* Sembunyikan overflow dari cards */
+}
+
+.cards {
+    display: flex;
+    transition: transform 0.6s ease-in-out; /* Transisi lebih halus */
+}
+
+.card {
+    min-width: 80%; /* Ukuran kartu diperkecil menjadi 80% dari kontainer */
+    margin: 0 10%; /* Menambahkan margin kiri dan kanan untuk spasi */
+    position: relative; /* Untuk menempatkan iframe */
+    overflow: hidden; /* Sembunyikan overflow pada kartu */
+    border-radius: 15px; /* Sudut melingkar pada kartu */
+    background-color: #ffffff; /* Warna latar belakang kartu */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus untuk kartu */
+    height: 500px; /* Tinggi kartu diatur untuk persegi */
+}
+
+.card iframe {
+    width: 100%; /* Menggunakan lebar penuh dari card */
+    height: 100%; /* Tinggi iframe diatur untuk memenuhi kartu */
+    border: none; /* Hapus border dari iframe */
+    background: transparent; /* Menghapus latar belakang dari iframe */
+}
+
+input[type="radio"] {
+    display: none; /* Sembunyikan radio button */
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Tambahkan posisi spesifik untuk tombol kiri dan kanan */
+.button-left {
+    margin-left: 10px; /* Beri jarak dari sisi kiri */
+}
+
+.button-right {
+    margin-right: 10px; /* Beri jarak dari sisi kanan */
+}
+
+
+.indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px; /* Spasi lebih banyak di atas indikator */
+    z-index: 2; /* Di atas konten */
+}
+
+.indicator {
+    width: 12px; /* Ukuran indikator lebih besar */
+    height: 12px;
+    border-radius: 50%;
+    background: gray; /* Warna dasar indikator */
+    margin: 0 7px; /* Spasi antar indikator */
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s; /* Transisi untuk efek hover */
+}
+
+.indicator:hover {
+    transform: scale(1.2); /* Zoom saat hover */
+}
+
+input[type="radio"]:checked ~ .cards {
+    transform: translateX(calc(-100% * var(--current-slide)));
+}
+
+input[type="radio"]:checked ~ .indicators .indicator {
+    background: #007bff; /* Warna aktif untuk indikator yang dipilih */
+}

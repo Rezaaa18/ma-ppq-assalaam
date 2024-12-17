@@ -1,0 +1,63 @@
+ /* Reset body padding dan scroll setelah modal ditutup */
+ body {
+    padding-right: 0 !important;
+    overflow-x: hidden !important;
+    /* Menghindari scroll horizontal */
+}
+/* Styling untuk modal-content */
+ .modal-content {
+    background: transparent;
+    border: none;
+    position: relative;
+    width: 100%;
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+/* Gaya tombol close dengan ikon */
+.modal-body .close {
+    position: absolute;
+    top: 10px;
+    /* Jarak dari atas */
+    right: 15px;
+    /* Jarak dari sisi kanan */
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    z-index: 1050;
+    /* Pastikan tombol berada di atas gambar */
+}
+
+/* Gaya gambar di dalam modal */
+.modal-body img {
+    width: 95%;
+    /* Gambar mengisi 95% lebar modal */
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    /* Sudut gambar lebih lembut */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    /* Bayangan halus */
+}
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+    .modal-content {
+        max-width: 100%;
+        /* Modal akan mengisi seluruh lebar layar di perangkat mobile */
+    }
+
+    .modal-body img {
+        width: 90%;
+        /* Gambar lebih besar di perangkat mobile */
+    }
+
+    .modal-body .close {
+        top: 5px;
+        /* Lebih dekat ke gambar */
+        right: 10px;
+        /* Mengurangi jarak ke kanan */
+    }
+}
+

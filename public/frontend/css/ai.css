@@ -1,0 +1,864 @@
+/* Editing Me */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+html,
+body {
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+    width: 100%;
+}
+
+/* judul sejarah */
+.justify-text {
+    text-align: justify;
+}
+.sejarah-section {
+    background-color: #1E4C6B;
+    color: #ecf0f1; /* Teks terang untuk kontras */
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dekorasi sudut dengan efek transparan */
+.sejarah-section::before,
+.sejarah-section::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(236, 240, 241, 0.1); /* Dekorasi transparan */
+    box-shadow: 0 10px 20px rgba(236, 240, 241, 0.15);
+}
+.sejarah-section::before {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -50px;
+}
+.sejarah-section::after {
+    width: 250px;
+    height: 250px;
+    bottom: -70px;
+    right: -70px;
+}
+
+/* Judul dengan aksen garis */
+.sejarah-section .sejarah-section-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #ecf0f1; /* Warna teks terang */
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.sejarah-section .sejarah-section-title::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    display: block;
+    margin: 15px auto 0;
+    border-radius: 10px;
+}
+
+/* Kontainer gambar */
+.sejarah-section .image-container {
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Kontainer teks */
+.sejarah-section .content-container {
+    padding: 30px;
+    background-color: #2c3e50; /* Warna latar yang sedikit lebih cerah dari latar utama */
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Teks konten sejarah */
+.sejarah-section .sejarah-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ecf0f1; /* Teks terang */
+    text-align: justify;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .sejarah-section .sejarah-section-title {
+        font-size: 2.2rem;
+    }
+
+    .sejarah-section .image-container {
+        max-width: 100%;
+    }
+
+    .sejarah-section .content-container {
+        padding: 20px;
+    }
+
+    .sejarah-section .sejarah-text {
+        font-size: 1rem;
+    }
+}
+
+/* end judul sejarah */
+
+/*paginasi */
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.pagination .page-item {
+    margin: 0 5px;
+}
+
+.pagination .page-link {
+    padding: 10px 15px;
+    color: #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination .page-link:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    color: #fff;
+    pointer-events: none; /* Disable pointer events on the active page */
+}
+
+/* end Artikel */
+
+/* Visi Misi */
+.vision-mission-header {
+    background: linear-gradient(to right, #eef2f3, #c3d5f7);
+    padding: 100px 0;
+    /* Background lebih besar */
+    font-family: "Arial", sans-serif;
+    color: #333;
+}
+
+.vision-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.vision-title {
+    font-size: 3rem;
+    /* Teks lebih besar */
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+.vision-description {
+    font-size: 1.2rem;
+    /* Ukuran font lebih besar */
+    line-height: 1.8;
+    color: #555;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* SECTION UTAMA */
+.vision-mission-section {
+    padding: 80px 20px;
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #f1f8e9);
+    /* Gradasi lembut */
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    color: #2c3e50;
+    margin: 30px auto;
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+/* Dekorasi Lingkaran */
+.vision-mission-section::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(
+        circle,
+        rgba(255, 223, 0, 0.8),
+        rgba(255, 223, 0, 0.1)
+    );
+    border-radius: 50%;
+    top: -50px;
+    left: -50px;
+    z-index: 0;
+}
+
+.vision-mission-section::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(
+        circle,
+        rgba(0, 183, 255, 0.7),
+        rgba(0, 183, 255, 0.1)
+    );
+    border-radius: 50%;
+    bottom: -80px;
+    right: -80px;
+    z-index: 0;
+}
+
+/* HEADER SECTION */
+.mission-header {
+    margin-bottom: 50px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.mission-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #01579b;
+    display: inline-block;
+    background: linear-gradient(to right, #ffffff, #d7e4f4);
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px; /* Tambahkan jarak ke atas */
+}
+
+/* SUBTITLE */
+.mission-subtitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #01579b;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.subtitle-symbol {
+    color: #ff6f61;
+    font-size: 28px;
+}
+
+/* DESKRIPSI */
+.mission-description {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #455a64;
+    font-family: "Georgia", serif;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .mission-title {
+        font-size: 36px;
+    }
+
+    .mission-description {
+        font-size: 16px;
+    }
+
+    .vision-mission-section {
+        padding: 60px 15px;
+    }
+}
+
+/* end Visi Misi */
+
+/* fasilitas */
+/* Styling untuk section Galeri Fasilitas */
+.gallery-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f0f4f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: "Arial", sans-serif;
+}
+
+/* Judul section */
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Styling untuk tab */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.tab-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+.bg-breadcrumb-fasilitas {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/header.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 140px 0 60px 0;
+    transition: 0.5s;
+    height: 600px;
+}
+
+@media (min-width: 992px) {
+    .bg-breadcrumb-fasilitas {
+        padding: 140px 0 60px 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .bg-breadcrumb-fasilitas {
+        padding: 60px 0 60px 0;
+    }
+}
+
+.bg-breadcrumb-fasilitas .breadcrumb {
+    position: relative;
+}
+
+.bg-breadcrumb-fasilitas .breadcrumb .breadcrumb-item a {
+    color: var(--bs-white);
+}
+/* Mengatur input radio untuk mengendalikan tampilan */
+input[type="radio"] {
+    display: none; /* Menyembunyikan radio button */
+}
+
+/* Konten tab */
+.tab-content {
+    display: none; /* Menyembunyikan semua konten tab */
+    transition: opacity 0.5s ease;
+}
+
+/* Menampilkan konten tab yang aktif */
+input[type="radio"]:checked + .tab-button + .tab-content {
+    display: block; /* Menampilkan konten yang sesuai saat tab aktif */
+}
+
+/* end fasilitas */
+
+.carousel-caption .text-start {
+    padding-left: 30px; /* Atur sesuai kebutuhan */
+}
+
+/* artikel home */
+
+/* Section Background */
+/* Gradient Section */
+.bg-gradient-news {
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    padding-bottom: 100px;
+}
+
+/* Judul Utama */
+.news-section h1 {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Kartu Berita */
+.news-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    background: #fff;
+    color: #333;
+}
+
+.news-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Gambar Berita */
+.news-img-wrapper {
+    position: relative;
+}
+
+.news-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.news-card:hover .news-img {
+    transform: scale(1.1);
+}
+
+/* Tanggal */
+.news-date {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Tombol */
+.btn-gradient-news {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff4e50, #f9d423);
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-gradient-news:hover {
+    background: linear-gradient(45deg, #f9d423, #ff4e50);
+    transform: scale(1.1);
+}
+
+/* Card Body */
+.card-body h5 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.card-body h5:hover {
+    color: #ff4e50;
+}
+
+/* Jarak dari Navbar */
+.mt-navbar {
+    margin-top: 100px; /* Atur jarak sesuai kebutuhan */
+}
+
+/*end artikel home */
+
+/* Gaya tombol "Daftar Sekarang" */
+.btn-daftar {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+/* Hover efek untuk tombol */
+.btn-daftar:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* foto galeri kepesantrenan/sekolah */
+/* Styling untuk galeri-container */
+.galeri-container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efek hover pada gambar galeri */
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Gambar galeri */
+.gallery-img {
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Deskripsi di dalam gambar (akan muncul hanya saat hover) */
+.gallery-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    padding: 10px;
+    width: 100%;  /* Pastikan deskripsi mengambil lebar penuh */
+    text-align: center;
+    font-size: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    word-wrap: break-word;  /* Memaksa teks untuk pecah ke baris berikutnya */
+    white-space: normal;   /* Membuat teks panjang terbungkus dalam beberapa baris */
+}
+
+/* Mengatur deskripsi agar muncul saat gambar di-hover */
+.gallery-item:hover .gallery-description {
+    opacity: 1;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1; /* Overlay muncul saat hover */
+}
+
+
+/* end foto galeri kepesantrenan % sekolah */
+
+/* prestasi */
+
+.achievement-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.achievement-description {
+    text-align: center;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.achievement-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.month-title {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.achievement-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.achievement-card {
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+}
+
+.achievement-card img {
+    width: 100%;
+    height: 250px; /* Meningkatkan tinggi gambar untuk membuatnya lebih besar */
+    object-fit: cover; /* Memastikan gambar terpotong dengan baik dan tetap proporsional */
+    border-radius: 8px;
+}
+
+.achievement-card h3 {
+    color: #007bff;
+    font-size: 1.25em;
+    margin: 10px 0;
+}
+
+.achievement-card p {
+    color: #666;
+    font-size: 0.9em;
+    margin: 10px 0;
+}
+
+.date {
+    font-size: 0.85em;
+    color: #999;
+}
+
+/* end prestasi */
+
+/* agenda home */
+
+/* Container untuk bagian agenda */
+/* Kontainer untuk agenda */
+.agenda-section {
+    padding: 80px 0;
+    background-color: #f7f7f7;
+}
+
+/* Judul Agenda */
+.agenda-section h1 {
+    font-size: 2.5rem;
+    color: #34495e;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 50px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Kartu agenda */
+.agenda-card {
+    background-color: #ffffff;
+    border: 1px solid #ecf0f1;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.agenda-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Gambar agenda */
+.agenda-card-img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Badan kartu agenda */
+.agenda-card-body {
+    padding: 35px;
+}
+
+/* Tabel dalam kartu */
+.table td {
+    padding: 10px 15px;
+    vertical-align: middle;
+    color: #34495e;
+}
+
+/* Label dalam tabel */
+.agenda-label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Titik ":" */
+.agenda-colon {
+    color: #7f8c8d;
+}
+
+/* Nilai dalam tabel */
+.agenda-value {
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+/* Badge status */
+.badge {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background-color: #e67e22; /* Warna oranye yang elegan */
+    color: white;
+}
+
+/* Tombol lihat semua agenda dengan warna hijau */
+.btn-outline-primary {
+    font-size: 1.1rem;
+    padding: 12px 35px;
+    border-radius: 30px;
+    border-color: #28a745; /* Warna hijau */
+    color: #28a745; /* Warna hijau */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #28a745; /* Warna hijau pada hover */
+    color: white;
+    transform: scale(1.05);
+}
+
+
+/* end agenda home */
+
+/*pengumuman */
+/* Pengaturan umum */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Mengatur tinggi body */
+}
+
+/* Container pengumuman */
+.announcement-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Mengatur lebar 80% */
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px auto; /* Menambahkan margin vertikal dan otomatis untuk horizontal */
+}
+
+/* Bagian header pengumuman */
+.announcement-header {
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Konten pengumuman */
+.announcement-content {
+    padding: 20px;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Pengaturan gambar pengumuman */
+#announcement-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Tombol baca selengkapnya */
+.read-more-btn {
+    background-color: #00d084;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Jarak antara konten dan tombol */
+}
+
+.read-more-btn:hover {
+    background-color: #009872;
+}
+
+/* Bagian footer pengumuman */
+.announcement-footer {
+    margin-top: 20px;
+}
+
+/* Countdown timer */
+.countdown {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e74c3c; /* Warna untuk countdown */
+    margin-top: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Warna latar belakang saat hover */
+    transform: scale(1.05); /* Sedikit membesar saat hover */
+}
+/* end pengumuman */
+
+/* button agenda home */
+.btn-primary {
+    border: none; /* Tanpa border */
+    border-radius: 25px; /* Sudut membulat */
+    padding: 10px 20px; /* Padding atas-bawah dan kiri-kanan */
+    font-size: 18px; /* Ukuran font */
+    transition: background-color 0.3s, transform 0.3s; /* Transisi saat hover */
+}
+/* end agenda home */
+
+/* disqus */
+
+#disqus_thread {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+/* end disqus */
