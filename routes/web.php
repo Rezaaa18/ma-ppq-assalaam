@@ -155,7 +155,6 @@ Route::get('/',[Frontendcontroller::class,'welcome']);
 
 // BERITA / ARTIKEL
 Route::get('/berita',[Frontendcontroller::class,'berita'])->name('berita.index');
-Route::get('/berita',[Frontendcontroller::class,'berita'])->name('berita.berita');
 Route::get('berita/{slug}',[Frontendcontroller::class,'showBerita'])->name('berita.show');
 Route::get('/',[Frontendcontroller::class,'berita'])->name('berita.index');
 
