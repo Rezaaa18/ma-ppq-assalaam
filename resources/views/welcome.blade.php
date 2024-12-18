@@ -119,7 +119,7 @@
 
 <body>
 
-    @include('include.frontend.spinner')
+    {{-- @include('include.frontend.spinner') --}}
 
 
     <!-- Navbar & Hero Start -->
