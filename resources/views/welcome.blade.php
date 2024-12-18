@@ -2,52 +2,43 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>MA-PPQ ASSALAAM</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <!-- Meta Tags untuk SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta Tags untuk SEO -->
     <meta name="description" content="Madrasah Assalaam adalah institusi pendidikan Islam yang menawarkan program berkualitas untuk mencetak generasi unggul.">
     <meta name="keywords" content="madrasah, pendidikan Islam, madrasah terbaik, madrasah Assalaam, sekolah Islam">
     <meta name="author" content="Madrasah Assalaam">
 
-  <!-- Title Tag -->
-  <title>Madrasah Assalaam - Pendidikan Islam Berkualitas</title>
+    <!-- Title Tag -->
+    <title>Madrasah Assalaam - Pendidikan Islam Berkualitas</title>
 
-  <!-- Canonical Tag -->
-  <link rel="canonical" href="https://ma-assalaam.sch.id/">
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://ma-assalaam.sch.id/">
 
-  <!-- Open Graph Tags untuk Social Media -->
-  <meta property="og:title" content="Madrasah Assalaam - Pendidikan Islam Berkualitas">
-  <meta property="og:description" content="Madrasah Assalaam menawarkan program pendidikan berkualitas untuk mencetak generasi unggul dengan nilai-nilai Islam.">
-  <meta property="og:image" content="https://ma-assalaam.sch.id/images/logo.png">
-  <meta property="og:url" content="https://ma-assalaam.sch.id/">
-  <meta property="og:type" content="website">
+    <!-- Open Graph Tags untuk Social Media -->
+    <meta property="og:title" content="Madrasah Assalaam - Pendidikan Islam Berkualitas">
+    <meta property="og:description" content="Madrasah Assalaam menawarkan program pendidikan berkualitas untuk mencetak generasi unggul dengan nilai-nilai Islam.">
+    <meta property="og:image" content="https://ma-assalaam.sch.id/images/logo.png">
+    <meta property="og:url" content="https://ma-assalaam.sch.id/">
+    <meta property="og:type" content="website">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Madrasah Assalaam - Pendidikan Islam Berkualitas">
-  <meta name="twitter:description" content="Madrasah Assalaam menawarkan program pendidikan berkualitas untuk mencetak generasi unggul dengan nilai-nilai Islam.">
-  <meta name="twitter:image" content="https://ma-assalaam.sch.id/images/logo.png">
-
-  <!-- Favicon -->
-  <link rel="icon" href="https://ma-assalaam.sch.id/favicon.ico" type="image/x-icon">
-
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Madrasah Assalaam - Pendidikan Islam Berkualitas">
+    <meta name="twitter:description" content="Madrasah Assalaam menawarkan program pendidikan berkualitas untuk mencetak generasi unggul dengan nilai-nilai Islam.">
+    <meta name="twitter:image" content="https://ma-assalaam.sch.id/images/logo.png">
 
     <!-- Favicon -->
-    <link href="{{ asset('frontend/img/logo.png') }}" rel="icon">
+    <link rel="icon" href="{{ asset('frontend/img/logo.png') }}" type="image/x-icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Libraries Stylesheet -->
@@ -55,38 +46,31 @@
     <link href="{{ asset('frontend/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
 
-
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('frontend/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('frontend/css/ai.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/css/modal.css') }}">
+    <link href="{{ asset('frontend/css/ai.css') }}" rel="stylesheet">
+    <link href="{{ asset('frontend/css/modal.css') }}" rel="stylesheet">
+
+    <!-- Custom Styles -->
     <style>
         /* Gradient Background */
-        /* Background Gradien Santri */
         .bg-gradient-santri {
             background: linear-gradient(135deg, #5cb85c, #8dc891);
-            /* Gradasi hijau */
             background-size: 95% 95%;
-            /* Background ukuran 95% */
             background-position: center;
             background-repeat: no-repeat;
             padding: 0 20px;
-            /* Memberi ruang di kiri dan kanan */
             color: #fff;
             border-radius: 90px;
-            /* Efek lancip di atas kiri dan kanan */
         }
-
 
         p.pengumuman {
             color: black !important;
         }
 
-
-        /* Warna Khusus untuk Tema Pesantren */
         .text-green {
             color: #2a6e2f;
         }
@@ -99,13 +83,10 @@
             color: #f9f7f1;
         }
 
-
-
         .text-krem-light {
             color: #faf9f3;
         }
 
-        /* Tombol Gradien Hijau */
         .btn-gradient-green {
             background: linear-gradient(90deg, #2a6e2f, #56ab56);
             border: none;
@@ -119,7 +100,6 @@
             transform: scale(1.05);
         }
 
-        /* Ikon Tanggal */
         .icon-date {
             width: 70px;
             height: 70px;
