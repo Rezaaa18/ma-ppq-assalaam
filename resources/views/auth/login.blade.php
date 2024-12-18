@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="{{ asset('backend/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
 
     <link rel="stylesheet" href="{{ asset('backend/assets/vendor/css/pages/page-auth.css') }}" />
+    <script src="{{ asset('backend/assets/vendor/js/helpers.js') }}"></script>
+    <script src="{{ asset('backend/assets/js/config.js') }}"></script>
 </head>
 
 <body>
@@ -43,7 +45,7 @@
                     <div class="card-body">
                         <!-- Logo -->
                         <div class="app-brand justify-content-center">
-                            <a href="index.html" class="app-brand-link gap-2">
+                            <a href="{{"/"}}" class="app-brand-link gap-2">
                                 <span class="app-brand-logo demo">
                                     <img src="{{ asset('backend/assets/img/favicon/logo.png') }}" alt=""
                                         style="max-height: 5rem">
@@ -106,8 +108,6 @@
 
     <!-- / Content -->
 
-    <script src="{{ asset('backend/assets/vendor/js/helpers.js') }}"></script>
-    <script src="{{ asset('backend/assets/js/config.js') }}"></script>
     <script src="{{ asset('backend/assets/vendor/libs/jquery/jquery.js') }}"></script>
     <script src="{{ asset('backend/assets/vendor/libs/popper/popper.js') }}"></script>
     <script src="{{ asset('backend/assets/vendor/js/bootstrap.js') }}"></script>
