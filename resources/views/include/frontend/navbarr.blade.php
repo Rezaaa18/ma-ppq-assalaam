@@ -1,6 +1,6 @@
 <!-- resources/views/partials/navbar.blade.php -->
 <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-    <a href="" class="navbar-brand p-0">
+    <a href="{{url('/')}}" class="navbar-brand p-0">
         <img src="{{ asset('frontend/img/logo.png') }}" alt="Logo">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">

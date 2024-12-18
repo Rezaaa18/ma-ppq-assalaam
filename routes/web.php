@@ -15,10 +15,6 @@ use App\Http\Controllers\JabatanController;
 use App\Http\Controllers\StrukturalController;
 use App\Http\Controllers\VisiController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes(
     ['register' => false]
 );
@@ -153,10 +149,10 @@ Route::get('/show', function () {
 // sejarah
 Route::get('/',[Frontendcontroller::class,'welcome']);
 
-// BERITA / ARTIKEL
+
+Route::get('/',[Frontendcontroller::class ,'berita'])->name('berita.index');
 Route::get('/berita',[Frontendcontroller::class,'berita'])->name('berita.index');
 Route::get('berita/{slug}',[Frontendcontroller::class,'showBerita'])->name('berita.show');
-Route::get('/',[Frontendcontroller::class,'berita'])->name('berita.index');
 
 
 // Agenda
@@ -192,5 +188,4 @@ Route::get('/',[Frontendcontroller::class,'welcome']);
 
 
 
-Route::get('/berita', [Frontendcontroller::class, 'berita'])->name('berita.berita');
 Route::get('/agenda/update-statuses', [AgendaController::class, 'updateStatuses']);
