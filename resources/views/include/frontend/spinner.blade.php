@@ -38,7 +38,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -57,67 +59,6 @@
     <link href="{{ asset('frontend/css/ai.css') }}" rel="stylesheet">
     <link href="{{ asset('frontend/css/modal.css') }}" rel="stylesheet">
 
-    <!-- Custom Styles -->
-    <style>
-        /* Gradient Background */
-        .bg-gradient-santri {
-            background: linear-gradient(135deg, #5cb85c, #8dc891);
-            background-size: 95% 95%;
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 0 20px;
-            color: #fff;
-            border-radius: 90px;
-        }
-
-        p.pengumuman {
-            color: black !important;
-        }
-
-        .text-green {
-            color: #2a6e2f;
-        }
-
-        .bg-krem {
-            background-color: #f9f7f1;
-        }
-
-        .text-krem {
-            color: #f9f7f1;
-        }
-
-        .text-krem-light {
-            color: #faf9f3;
-        }
-
-        .btn-gradient-green {
-            background: linear-gradient(90deg, #2a6e2f, #56ab56);
-            border: none;
-            color: white;
-            font-weight: bold;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .btn-gradient-green:hover {
-            box-shadow: 0 8px 15px rgba(42, 110, 47, 0.4);
-            transform: scale(1.05);
-        }
-
-        .icon-date {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            font-size: 1rem;
-            display: inline-flex;
-            text-align: center;
-            line-height: 1.2;
-            padding: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            font-family: 'Arial', sans-serif;
-            font-weight: bold;
-            font-size: 14px;
-        }
-    </style>
 </head>
 
 <body>
@@ -128,6 +69,23 @@
             <span class="sr-only">Loading...</span>
         </div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('frontend/lib/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('frontend/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('frontend/lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ asset('frontend/lib/counterup/counterup.min.js') }}"></script>
+    <script src="{{ asset('frontend/lib/lightbox/js/lightbox.min.js') }}"></script>
+    <script src="{{ asset('frontend/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="{{ asset('frontend/js/main.js') }}"></script>
 </body>
 
 </html>
