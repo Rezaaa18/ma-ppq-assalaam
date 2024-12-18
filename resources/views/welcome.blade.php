@@ -16,23 +16,23 @@
   <title>Madrasah Assalaam - Pendidikan Islam Berkualitas</title>
 
   <!-- Canonical Tag -->
-  <link rel="canonical" href="https://www.madrasahassalaam.com/">
+  <link rel="canonical" href="https://ma-assalaam.sch.id/">
 
   <!-- Open Graph Tags untuk Social Media -->
   <meta property="og:title" content="Madrasah Assalaam - Pendidikan Islam Berkualitas">
   <meta property="og:description" content="Madrasah Assalaam menawarkan program pendidikan berkualitas untuk mencetak generasi unggul dengan nilai-nilai Islam.">
-  <meta property="og:image" content="https://www.madrasahassalaam.com/images/logo.png">
-  <meta property="og:url" content="https://www.madrasahassalaam.com/">
+  <meta property="og:image" content="https://ma-assalaam.sch.id/images/logo.png">
+  <meta property="og:url" content="https://ma-assalaam.sch.id/">
   <meta property="og:type" content="website">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Madrasah Assalaam - Pendidikan Islam Berkualitas">
   <meta name="twitter:description" content="Madrasah Assalaam menawarkan program pendidikan berkualitas untuk mencetak generasi unggul dengan nilai-nilai Islam.">
-  <meta name="twitter:image" content="https://www.madrasahassalaam.com/images/logo.png">
+  <meta name="twitter:image" content="https://ma-assalaam.sch.id/images/logo.png">
 
   <!-- Favicon -->
-  <link rel="icon" href="https://www.madrasahassalaam.com/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="https://ma-assalaam.sch.id/favicon.ico" type="image/x-icon">
 
 
     <!-- Favicon -->
