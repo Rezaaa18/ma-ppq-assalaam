@@ -359,7 +359,8 @@
                 <div class="col-md-4 mt-4">
                     <div class="agenda-card">
                         @if ($data->image)
-                            <img class="agenda-card-img img-fluid rounded-top" src="{{ asset('image/agenda/' . $data->image) }}" alt="Agenda Image">
+                            <img class="agenda-card-img img-fluid rounded-top"
+                                src="{{ asset('image/agenda/' . $data->image) }}" alt="Agenda Image">
                         @endif
                         <div class="agenda-card-body">
                             <table class="table table-borderless mb-0">
