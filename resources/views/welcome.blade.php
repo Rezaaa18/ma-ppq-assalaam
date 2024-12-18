@@ -31,31 +31,6 @@
   <meta name="twitter:description" content="Madrasah Assalaam menawarkan program pendidikan berkualitas untuk mencetak generasi unggul dengan nilai-nilai Islam.">
   <meta name="twitter:image" content="https://www.madrasahassalaam.com/images/logo.png">
 
-  <!-- Schema Markup -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "Madrasah Assalaam",
-    "url": "https://www.madrasahassalaam.com/",
-    "logo": "https://www.madrasahassalaam.com/images/logo.png",
-    "description": "Madrasah Assalaam adalah institusi pendidikan Islam yang menawarkan program berkualitas untuk mencetak generasi unggul.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Jl. Pendidikan No.123",
-      "addressLocality": "Kota Anda",
-      "addressRegion": "Provinsi Anda",
-      "postalCode": "12345",
-      "addressCountry": "ID"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+62-812-3456-7890",
-      "contactType": "customer service"
-    }
-  }
-  </script>
-
   <!-- Favicon -->
   <link rel="icon" href="https://www.madrasahassalaam.com/favicon.ico" type="image/x-icon">
 
