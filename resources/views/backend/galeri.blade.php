@@ -102,10 +102,7 @@
                                     <input type="file" name="media" accept="image/*"
                                         class="form-control @error('media') is-invalid @enderror">
                                     <small class="text-muted">Ukuran maksimal 2MB</small>
-<<<<<<< HEAD
                                 </div>
-=======
->>>>>>> a927b16c9921a6378f4e6b61860405b82cd22c3e
                                 @error('media')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

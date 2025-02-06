@@ -185,7 +185,7 @@
                             <img src="{{ Storage::url($kepalaSekolah->foto) }}" class="card-img-top">
                             <div class="card-body text-center">
                                 <h5 class="card-title mb-1">{{ $kepalaSekolah->nama }}</h5>
-                                <p class="card-text">{{ $kepalaSekolah->status }}</p>
+                                <p class="card-text">{{ $kepalaSekolah->jabatan->nama_jabatan }}</p>
                                 <div class="d-flex justify-content-center">
                                     <a href="#" class="btn btn-outline-primary btn-sm me-2"><i
                                             class="fab fa-facebook-f"></i></a>
@@ -212,14 +212,14 @@
         <div class="container pb-5">
             <h4 class="text-primary">Guru</h4>
             <div class="row g-4">
-                @foreach ($guru as $item)
+                @foreach ($struktural as $item)
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="card shadow-sm">
                             <img src="{{ Storage::url($item->foto) }}" class="card-img-top"
                                 alt="Guru {{ $item->nama }}">
                             <div class="card-body text-center">
                                 <h5 class="card-title mb-1">{{ $item->nama }}</h5>
-                                <p class="card-text">{{ $item->status }}</p>
+                                <p class="card-text">{{ $item->jabatan->nama_jabatan }}</p>
                                 <div class="d-flex justify-content-center">
                                     <a href="#" class="btn btn-outline-primary btn-sm me-2"><i
                                             class="fab fa-facebook-f"></i></a>
@@ -236,81 +236,10 @@
                 @endforeach
             </div>
             <div class="d-flex justify-content-center mt-4">
-                {{ $guru->links('pagination::bootstrap-4', ['class' => 'pagination-custom']) }}
+                {{ $struktural->links('pagination::bootstrap-4', ['class' => 'pagination-custom']) }}
             </div>
         </div>
     </div>
-    <!-- Team End -->
-
-    <!-- Team Start -->
-    @if ($staff->isNotEmpty())
-        <div class="container-fluid team pb-5 mt-5">
-            <div class="container pb-5">
-                <h4 class="text-primary">Staff</h4>
-                <div class="row g-4">
-                    @foreach ($karyawan as $item)
-                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="card shadow-sm">
-                                {{-- <img src="{{ Storage::url($item->foto) }}" class="card-img-top"
-                                    alt="MOCH RISMAN N, S.PD"> --}}
-                                <div class="card-body text-center">
-                                    <h5 class="card-title mb-1">{{ $item->nama }}</h5>
-                                    <p class="card-text">{{ $item->status }}</p>
-                                    <div class="d-flex justify-content-center">
-                                        <a href="#" class="btn btn-outline-primary btn-sm me-2"><i
-                                                class="fab fa-facebook-f"></i></a>
-                                        <a href="#" class="btn btn-outline-primary btn-sm me-2"><i
-                                                class="fab fa-twitter"></i></a>
-                                        <a href="#" class="btn btn-outline-primary btn-sm me-2"><i
-                                                class="fab fa-linkedin-in"></i></a>
-                                        <a href="#" class="btn btn-outline-primary btn-sm"><i
-                                                class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    @endif
-
-    <!-- Team End -->
-
-    <!-- Team Start -->
-    @if ($karyawan->isNotEmpty())
-        <div class="container-fluid team pb-5 mt-5">
-            <div class="container pb-5">
-                <h4 class="text-primary">Karyawan</h4>
-                <div class="row g-4">
-                    @foreach ($karyawan as $item)
-                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="card shadow-sm">
-                                <img src="{{ Storage::url($item->foto) }}" class="card-img-top"
-                                    alt="MOCH RISMAN N, S.PD">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title mb-1">{{ $item->nama }}</h5>
-                                    <p class="card-text">{{ $item->status }}</p>
-                                    <div class="d-flex justify-content-center">
-                                        <a href="#" class="btn btn-outline-primary btn-sm me-2"><i
-                                                class="fab fa-facebook-f"></i></a>
-                                        <a href="#" class="btn btn-outline-primary btn-sm me-2"><i
-                                                class="fab fa-twitter"></i></a>
-                                        <a href="#" class="btn btn-outline-primary btn-sm me-2"><i
-                                                class="fab fa-linkedin-in"></i></a>
-                                        <a href="#" class="btn btn-outline-primary btn-sm"><i
-                                                class="fab fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    @endif
-    <!-- Team End -->
-
     @include('include.frontend.footer')
 
 

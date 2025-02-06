@@ -238,12 +238,10 @@ class Frontendcontroller extends Controller
 
     public function struktural()
     {
-        $kepalaSekolah = Struktural::where('status', 'Kepala Sekolah')->first();
-        $guru = Struktural::where('status', 'Guru')->latest()->paginate(8);
-        $karyawan = Struktural::where('status', 'Karyawan')->get();
-        $staff = Struktural::where('status', 'Staff')->get();
+        $kepalaSekolah = Struktural::where('id_jabatan', '1')->first();
+        $struktural = Struktural::latest()->paginate(8);
 
-        return view('guru', compact('kepalaSekolah', 'guru', 'karyawan', 'staff'));
+        return view('guru', compact('kepalaSekolah', 'struktural'));
     }
 
 }
